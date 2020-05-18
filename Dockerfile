@@ -1,4 +1,4 @@
-FROM asterka/ubuntu
+FROM asterka/ubuntu:firttry
 
 # Install and configure CouchDB 1.6.1
 RUN DEBIAN_FRONTEND=noninteractive && \
@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     libcurl4-gnutls-dev \
     libtool && \
     cd /tmp && \
-    wget https://archive.apache.org/dist/couchdb/source/1.6.1/ && \
+    wget https://archive.apache.org/dist/couchdb/source/1.6.1/apache-couchdb-1.6.1.tar.gz && \
     tar xzvf apache-couchdb-1.6.1.tar.gz && \
     cd apache-couchdb-1.6.1 && \
     ./configure && \
