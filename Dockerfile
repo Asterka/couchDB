@@ -29,7 +29,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 # Add scripts
 ADD scripts /scripts
 RUN chmod +x /scripts/*.sh
-RUN touch /.firstrun
+RUN touch /.init
 
 # Command to run
 ENTRYPOINT ["/scripts/run.sh"]
